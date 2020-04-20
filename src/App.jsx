@@ -28,7 +28,11 @@ const [recipes, setRecipes] = useState([])
       </form>
       {recipes.map((recipe, idx) => {
         return (
-          <Recipe key={idx}/>
+          <Recipe key={idx}
+          title={recipe.recipe.label}
+          calories={recipe.recipe.calories}
+          image={recipe.recipe.image}
+          />
         )
       })}
     </div>
