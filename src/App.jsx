@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Recipe from './recipe'
-import APP_ID from './keys'
-import APP_KEY from './keys'
+// import APP_ID from './keys'
+// import APP_KEY from './keys'
 
 const App = () => {
  
@@ -18,7 +18,7 @@ const updateSearch = (e) => {
 
   useEffect( ()=> {
     getRecipes()
-  }, [])
+  }, [query])
 
   const getRecipes = async  () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
